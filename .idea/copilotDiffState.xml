@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/QUICK_START.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/QUICK_START.md" />
+              <option name="updatedContent" value="#  GUIDE DE DÉMARRAGE RAPIDE - TP19&#10;&#10;## ⚡ En 3 étapes seulement&#10;&#10;### Étape 1 : Recharger Maven (1 minute)&#10;```&#10;IntelliJ IDEA → Panneau Maven (à droite) → Cliquer sur &#10;```&#10;&#10;### Étape 2 : Démarrer Eureka Server (30 secondes)&#10;```&#10;1. Ouvrir : Eureka-Server/src/main/java/.../EurekaServerApplication.java&#10;2. Cliquer sur ▶️ ou Shift+F10&#10;3. Attendre : &quot;Started EurekaServerApplication&quot;&#10;```&#10;&#10;### Étape 3 : Démarrer Client Service (30 secondes)&#10;```&#10;1. Ouvrir : Client/Client/src/main/java/.../ClientApplication.java&#10;2. Cliquer sur ▶️ ou Shift+F10&#10;3. Attendre : &quot;Started ClientApplication&quot;&#10;```&#10;&#10;---&#10;&#10;## ✅ Vérification (30 secondes)&#10;&#10;### Dans PowerShell :&#10;```powershell&#10;cd C:\Users\Saad\Desktop\TP19&#10;.\test-endpoints.ps1&#10;```&#10;&#10;### Ou dans le navigateur :&#10;1. http://localhost:8761 → Vous devriez voir SERVICE-CLIENT&#10;2. http://localhost:8088/clients → Vous devriez voir 3 clients&#10;&#10;---&#10;&#10;##  Si ça ne marche pas&#10;&#10;### Problème : Le client ne se connecte pas à Eureka&#10;**Solution** : &#10;1. Arrêter le client&#10;2. Vérifier qu'Eureka est bien démarré (http://localhost:8761)&#10;3. Redémarrer le client&#10;&#10;### Problème : Port déjà utilisé&#10;**Solution** :&#10;```powershell&#10;# Trouver et tuer le processus&#10;netstat -ano | findstr :8088&#10;taskkill /F /PID &lt;numéro_du_processus&gt;&#10;```&#10;&#10;### Problème : Erreur H2 Driver&#10;**Solution** :&#10;```powershell&#10;cd Client\Client&#10;.\mvnw.cmd clean install -U&#10;# Puis redémarrer IntelliJ&#10;```&#10;&#10;---&#10;&#10;##  URLs importantes&#10;&#10;| Service | URL | Description |&#10;|---------|-----|-------------|&#10;| Eureka Dashboard | http://localhost:8761 | Voir tous les services |&#10;| Liste clients | http://localhost:8088/clients | API REST |&#10;| Client par ID | http://localhost:8088/client/1 | API REST |&#10;| Console H2 | http://localhost:8088/h2-console | Base de données |&#10;&#10;---&#10;&#10;##  Données de test disponibles&#10;&#10;```json&#10;[&#10;  {&quot;id&quot;: 1, &quot;nom&quot;: &quot;Rabab SELIMANI&quot;, &quot;age&quot;: 23.0},&#10;  {&quot;id&quot;: 2, &quot;nom&quot;: &quot;Amal RAMI&quot;, &quot;age&quot;: 22.0},&#10;  {&quot;id&quot;: 3, &quot;nom&quot;: &quot;Samir SAFI&quot;, &quot;age&quot;: 22.0}&#10;]&#10;```&#10;&#10;---&#10;&#10;##  C'est tout !&#10;&#10;**Temps total estimé** : ~3 minutes&#10;&#10;**Questions ?** Consultez le README.md complet&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
